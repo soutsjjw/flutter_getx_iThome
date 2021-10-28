@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:collection/collection.dart';
+
+import 'entity/Person.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,6 +38,8 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       _counter++;
     });
+
+    compateIfEqual();
   }
 
   @override
@@ -63,5 +68,25 @@ class _MyHomePageState extends State<MyHomePage> {
         child: const Icon(Icons.add),
       ),
     );
+  }
+
+  compateIfEqual() {
+    final person = Person()
+      ..name = "someone"
+      ..id = "1"
+      ..age = 5;
+
+    final personTwo = Person()
+      ..name = "sometwo"
+      ..id = "2"
+      ..age = 10;
+
+    final isEqual =
+    DeepCollectionEquality.unordered().equals(person, personTwo);
+    print(isEqual);
+
+    person.id = "1";
+    final isEqualTwo = DeepCollectionEquality.unordered().equals(person, personTwo);
+    print(isEqualTwo);
   }
 }
