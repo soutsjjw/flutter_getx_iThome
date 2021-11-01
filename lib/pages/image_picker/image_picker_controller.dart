@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:gallery_saver/gallery_saver.dart';
 import 'package:get/get.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
@@ -24,6 +25,7 @@ class ImagePickerController extends GetxController {
       // imageFilePath = pickedFile.path;
       // print(imageFilePath);
       imageFilePath = await cropImage(pickedFile.path);
+      GallerySaver.saveImage(imageFilePath);
     }
   }
 
