@@ -2,13 +2,15 @@ import 'package:flutter_getx_ithome/pages/carousel_slide/carousel_slide_bindings
 import 'package:flutter_getx_ithome/pages/carousel_slide/carousel_slide_page.dart';
 import 'package:flutter_getx_ithome/pages/first_page/first_page_bindings.dart';
 import 'package:flutter_getx_ithome/pages/first_page/first_page_page.dart';
+import 'package:flutter_getx_ithome/pages/image_picker/image_picker_bindings.dart';
+import 'package:flutter_getx_ithome/pages/image_picker/image_picker_page.dart';
 import 'package:flutter_getx_ithome/pages/lottie/lottie_bindings.dart';
 import 'package:flutter_getx_ithome/pages/lottie/lottie_page.dart';
 import 'package:get/get.dart';
 part 'app_routes.dart';
 
 abstract class AppPages {
-  static const initPage = Routes.FIRSTPAGE;
+  static const initPage = Routes.IMAGEPICKER;
 
   static final pages = [
     GetPage(
@@ -25,6 +27,11 @@ abstract class AppPages {
       name: Routes.CAROUSELSLIDE,
       page: () => CarouselSlidePage(),
       binding: CarouselSlideBinding(),
+    ),
+    GetPage(
+      name: Routes.IMAGEPICKER,
+      page: () => ImagePickerPage(),
+      binding: ImagePickerBinding(),
     ),
   ];
 }
