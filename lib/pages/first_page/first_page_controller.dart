@@ -11,6 +11,7 @@ class FirstPageController extends GetxController{
     "ImagePickerPage",
     "four",
     "five",
+    "ToastPage",
   ].obs;
   get dataList => _dataList.toList();
 

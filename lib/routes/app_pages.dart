@@ -6,6 +6,8 @@ import 'package:flutter_getx_ithome/pages/image_picker/image_picker_bindings.dar
 import 'package:flutter_getx_ithome/pages/image_picker/image_picker_page.dart';
 import 'package:flutter_getx_ithome/pages/lottie/lottie_bindings.dart';
 import 'package:flutter_getx_ithome/pages/lottie/lottie_page.dart';
+import 'package:flutter_getx_ithome/pages/toast/toast_bindings.dart';
+import 'package:flutter_getx_ithome/pages/toast/toast_page.dart';
 import 'package:get/get.dart';
 part 'app_routes.dart';
 
@@ -32,6 +34,11 @@ abstract class AppPages {
       name: Routes.IMAGEPICKER,
       page: () => ImagePickerPage(),
       binding: ImagePickerBinding(),
+    ),
+    GetPage(
+      name: Routes.TOAST,
+      page: () => ToastPage(),
+      binding: ToastBinding(),
     ),
   ];
 }
