@@ -10,7 +10,7 @@ import 'package:get/get.dart';
 part 'app_routes.dart';
 
 abstract class AppPages {
-  static const initPage = Routes.IMAGEPICKER;
+  static const initPage = Routes.FIRSTPAGE;
 
   static final pages = [
     GetPage(

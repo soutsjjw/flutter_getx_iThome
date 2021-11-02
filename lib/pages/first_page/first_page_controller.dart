@@ -1,7 +1,18 @@
+import 'package:flutter_getx_ithome/entity/person.dart';
 import 'package:flutter_getx_ithome/utils/user_default.dart';
 import 'package:get/get.dart';
+import 'package:collection/collection.dart';
 
 class FirstPageController extends GetxController{
+
+  final _dataList = [
+    "CarouselSlidePage",
+    "LottiePage",
+    "ImagePickerPage",
+    "four",
+    "five",
+  ].obs;
+  get dataList => _dataList.toList();
 
   @override
   void onInit() {
@@ -10,5 +21,21 @@ class FirstPageController extends GetxController{
     print(UserDefault().userName);
 
     super.onInit();
+  }
+
+  compateIfEqual() {
+    final person = Person()
+      ..name = "someone"
+      ..id = "1"
+      ..age = 5;
+
+    final personTwo = Person()
+      ..name = "sometwo"
+      ..id = "2"
+      ..age = 10;
+
+    final isEqual =
+    DeepCollectionEquality.unordered().equals(person, personTwo);
+    print(isEqual);
   }
 }
