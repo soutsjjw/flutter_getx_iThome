@@ -8,6 +8,10 @@ import 'package:flutter_getx_ithome/pages/image_picker/image_picker_bindings.dar
 import 'package:flutter_getx_ithome/pages/image_picker/image_picker_page.dart';
 import 'package:flutter_getx_ithome/pages/lottie/lottie_bindings.dart';
 import 'package:flutter_getx_ithome/pages/lottie/lottie_page.dart';
+import 'package:flutter_getx_ithome/pages/qr_code/qr_code_bindings.dart';
+import 'package:flutter_getx_ithome/pages/qr_code/qr_code_page.dart';
+import 'package:flutter_getx_ithome/pages/qr_code_scan/qr_code_scan_bindings.dart';
+import 'package:flutter_getx_ithome/pages/qr_code_scan/qr_code_scan_page.dart';
 import 'package:flutter_getx_ithome/pages/toast/toast_bindings.dart';
 import 'package:flutter_getx_ithome/pages/toast/toast_page.dart';
 import 'package:get/get.dart';
@@ -46,6 +50,16 @@ abstract class AppPages {
       name: Routes.CACHEDNETWORKIMAGE,
       page: () => CachedNetworkImagePage(),
       binding: CachedNetworkImageBinding(),
+    ),
+    GetPage(
+      name: Routes.QRCODE,
+      page: () => QRCodePage(),
+      binding: QRCodeBinding(),
+    ),
+    GetPage(
+      name: Routes.QRCODESCAN,
+      page: () => QRCodeScanPage(),
+      binding: QRCodeScanBinding(),
     ),
   ];
 }

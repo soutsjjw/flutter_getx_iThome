@@ -7,4 +7,6 @@ abstract class Routes {
   static const IMAGEPICKER = '/ImagePickerPage';
   static const TOAST = '/ToastPage';
   static const CACHEDNETWORKIMAGE = '/CachedNetworkImagePage';
+  static const QRCODE = '/QRCodePage';
+  static const QRCODESCAN = '/QRCodeScanPage';
 }
