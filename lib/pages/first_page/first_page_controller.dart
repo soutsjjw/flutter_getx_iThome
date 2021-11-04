@@ -12,6 +12,7 @@ class FirstPageController extends GetxController{
     "four",
     "five",
     "ToastPage",
+    "CachedNetworkImagePage",
   ].obs;
   get dataList => _dataList.toList();
 

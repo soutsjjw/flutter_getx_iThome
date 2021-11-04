@@ -1,3 +1,5 @@
+import 'package:flutter_getx_ithome/pages/cached_network_image/cached_network_image_bindings.dart';
+import 'package:flutter_getx_ithome/pages/cached_network_image/cached_network_image_page.dart';
 import 'package:flutter_getx_ithome/pages/carousel_slide/carousel_slide_bindings.dart';
 import 'package:flutter_getx_ithome/pages/carousel_slide/carousel_slide_page.dart';
 import 'package:flutter_getx_ithome/pages/first_page/first_page_bindings.dart';
@@ -39,6 +41,11 @@ abstract class AppPages {
       name: Routes.TOAST,
       page: () => ToastPage(),
       binding: ToastBinding(),
+    ),
+    GetPage(
+      name: Routes.CACHEDNETWORKIMAGE,
+      page: () => CachedNetworkImagePage(),
+      binding: CachedNetworkImageBinding(),
     ),
   ];
 }

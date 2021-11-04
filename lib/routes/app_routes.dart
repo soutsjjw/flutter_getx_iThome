@@ -6,4 +6,5 @@ abstract class Routes {
   static const CAROUSELSLIDE = '/CarouselSlidePage';
   static const IMAGEPICKER = '/ImagePickerPage';
   static const TOAST = '/ToastPage';
+  static const CACHEDNETWORKIMAGE = '/CachedNetworkImagePage';
 }
