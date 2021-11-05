@@ -9,4 +9,5 @@ abstract class Routes {
   static const CACHEDNETWORKIMAGE = '/CachedNetworkImagePage';
   static const QRCODE = '/QRCodePage';
   static const QRCODESCAN = '/QRCodeScanPage';
+  static const WRAP = "/WrapPage";
 }

@@ -14,6 +14,8 @@ import 'package:flutter_getx_ithome/pages/qr_code_scan/qr_code_scan_bindings.dar
 import 'package:flutter_getx_ithome/pages/qr_code_scan/qr_code_scan_page.dart';
 import 'package:flutter_getx_ithome/pages/toast/toast_bindings.dart';
 import 'package:flutter_getx_ithome/pages/toast/toast_page.dart';
+import 'package:flutter_getx_ithome/pages/wrap/wrap_bindings.dart';
+import 'package:flutter_getx_ithome/pages/wrap/wrap_page.dart';
 import 'package:get/get.dart';
 part 'app_routes.dart';
 
@@ -60,6 +62,11 @@ abstract class AppPages {
       name: Routes.QRCODESCAN,
       page: () => QRCodeScanPage(),
       binding: QRCodeScanBinding(),
+    ),
+    GetPage(
+      name: Routes.WRAP,
+      page: () => WrapPage(),
+      binding: WrapBinding(),
     ),
   ];
 }
