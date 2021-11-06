@@ -1,3 +1,5 @@
+import 'package:flutter_getx_ithome/pages/binding/binding_bindings.dart';
+import 'package:flutter_getx_ithome/pages/binding/binding_page.dart';
 import 'package:flutter_getx_ithome/pages/cached_network_image/cached_network_image_bindings.dart';
 import 'package:flutter_getx_ithome/pages/cached_network_image/cached_network_image_page.dart';
 import 'package:flutter_getx_ithome/pages/carousel_slide/carousel_slide_bindings.dart';
@@ -67,6 +69,11 @@ abstract class AppPages {
       name: Routes.WRAP,
       page: () => WrapPage(),
       binding: WrapBinding(),
+    ),
+    GetPage(
+      name: Routes.BINDING,
+      page: () => BindingPage(),
+      binding: BindingBinding(),
     ),
   ];
 }

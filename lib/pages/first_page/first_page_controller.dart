@@ -1,4 +1,5 @@
 import 'package:flutter_getx_ithome/entity/person.dart';
+import 'package:flutter_getx_ithome/routes/app_pages.dart';
 import 'package:flutter_getx_ithome/utils/user_default.dart';
 import 'package:get/get.dart';
 import 'package:collection/collection.dart';
@@ -15,6 +16,7 @@ class FirstPageController extends GetxController{
     "CachedNetworkImagePage",
     "QRCodePage",
     "WrapPage",
+    Routes.BINDING.replaceAll("/", ""),
   ].obs;
   get dataList => _dataList.toList();
 
