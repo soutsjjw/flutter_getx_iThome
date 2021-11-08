@@ -11,4 +11,5 @@ abstract class Routes {
   static const QRCODESCAN = '/QRCodeScanPage';
   static const WRAP = "/WrapPage";
   static const BINDING = "/BindingPage";
+  static const EXTENSION = "/ExtensionPage";
 }

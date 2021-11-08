@@ -4,6 +4,8 @@ import 'package:flutter_getx_ithome/pages/cached_network_image/cached_network_im
 import 'package:flutter_getx_ithome/pages/cached_network_image/cached_network_image_page.dart';
 import 'package:flutter_getx_ithome/pages/carousel_slide/carousel_slide_bindings.dart';
 import 'package:flutter_getx_ithome/pages/carousel_slide/carousel_slide_page.dart';
+import 'package:flutter_getx_ithome/pages/extension/extension_bindings.dart';
+import 'package:flutter_getx_ithome/pages/extension/extension_page.dart';
 import 'package:flutter_getx_ithome/pages/first_page/first_page_bindings.dart';
 import 'package:flutter_getx_ithome/pages/first_page/first_page_page.dart';
 import 'package:flutter_getx_ithome/pages/image_picker/image_picker_bindings.dart';
@@ -74,6 +76,11 @@ abstract class AppPages {
       name: Routes.BINDING,
       page: () => BindingPage(),
       binding: BindingBinding(),
+    ),
+    GetPage(
+      name: Routes.EXTENSION,
+      page: () => ExtensionPage(),
+      binding: ExtensionBinding(),
     ),
   ];
 }

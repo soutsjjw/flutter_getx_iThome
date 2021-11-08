@@ -17,6 +17,7 @@ class FirstPageController extends GetxController{
     "QRCodePage",
     "WrapPage",
     Routes.BINDING.replaceAll("/", ""),
+    "ExtensionPage",
   ].obs;
   get dataList => _dataList.toList();
 

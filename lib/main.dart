@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getx_ithome/entity/person.dart';
 import 'package:flutter_getx_ithome/routes/app_pages.dart';
+import 'package:flutter_getx_ithome/translations/translation_service.dart';
 import 'package:flutter_getx_ithome/utils/user_default.dart';
 import 'package:get/get.dart';
 import 'package:collection/collection.dart';
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
       initialRoute: AppPages.initPage,
       getPages: AppPages.pages,
       enableLog: true,
-      locale: const Locale('zh'),
+      translations: TranslationService(),
+      locale: const Locale('zh', 'TW'),
     );
   }
 
