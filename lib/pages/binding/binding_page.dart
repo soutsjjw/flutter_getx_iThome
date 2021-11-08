@@ -7,7 +7,7 @@ class BindingPage extends GetView<BindingController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Binding Page')),
+      appBar: AppBar(title: const Text('Binding Page')),
       body: SafeArea(
         child: SizedBox.expand(
           child: Column(
@@ -31,11 +31,34 @@ class BindingPage extends GetView<BindingController> {
                   );
                 },
               ),
+              GetBuilder<BindingController>(
+                id: "enum", //對應到BindingPageController64行的 update(["enum"]);
+                init: controller,
+                builder: (_) {
+                  return Center(
+                      child: Text(controller.enumSelectState.toString()));
+                },
+              ),
+              GetBuilder<BindingController>(
+                init: controller,
+                builder: (_) {
+                  return Expanded(
+                    flex: 1,
+                    child: ListView(
+                      children: List.generate(controller.someModelList.length,
+                          (index) {
+                        final title = controller.someModelList[index].name;
+                        return Center(child: Text(title));
+                      }),
+                    ),
+                  );
+                },
+              ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: CupertinoButton(
                   color: Colors.blue,
-                  child: Text("someString changed"),
+                  child: const Text("someString changed"),
                   onPressed: () {
                     if (controller.someString.isEmpty) {
                       controller.someString = "someString changed";
@@ -49,7 +72,7 @@ class BindingPage extends GetView<BindingController> {
                 padding: const EdgeInsets.all(8.0),
                 child: CupertinoButton(
                   color: Colors.blue,
-                  child: Text("someInt changed"),
+                  child: const Text("someInt changed"),
                   onPressed: () {
                     if (controller.someInt == 0) {
                       controller.someInt = 99;
@@ -63,7 +86,7 @@ class BindingPage extends GetView<BindingController> {
                 padding: const EdgeInsets.all(8.0),
                 child: CupertinoButton(
                   color: Colors.blue,
-                  child: Text("someBool changed"),
+                  child: const Text("someBool changed"),
                   onPressed: () => controller.someBool = !controller.someBool,
                 ),
               ),
@@ -71,9 +94,29 @@ class BindingPage extends GetView<BindingController> {
                 padding: const EdgeInsets.all(8.0),
                 child: CupertinoButton(
                   color: Colors.blue,
-                  child: Text("someBasicList changed"),
+                  child: const Text("someBasicList changed"),
                   onPressed: () {
                     controller.addBasicList();
+                  },
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: CupertinoButton(
+                  color: Colors.blue,
+                  child: const Text("enum changed"),
+                  onPressed: () {
+                    controller.enumChanged();
+                  },
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: CupertinoButton(
+                  color: Colors.blue,
+                  child: const Text("someModelList changed"),
+                  onPressed: () {
+                    controller.addSomeModelList();
                   },
                 ),
               ),
