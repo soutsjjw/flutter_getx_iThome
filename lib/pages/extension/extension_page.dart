@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_getx_ithome/pages/extension/extension_controller.dart';
 import 'package:get/get.dart';
@@ -68,6 +70,32 @@ class ExtensionPage extends GetView<ExtensionController> {
                       ),
                     ],
                   ),
+                ),
+              ),
+              Expanded(
+                flex: 4,
+                child: GetBuilder<ExtensionController>(
+                  init: controller,
+                  initState: (_) {},
+                  tag: "imageFlip",
+                  builder: (_) {
+                    return AnimatedBuilder(
+                      animation: controller.animationController,
+                      builder: (context, child) {
+                        return Transform(
+                          child: child,
+                          alignment: Alignment.center,
+                          transform: Matrix4.identity()
+                            ..scale(controller.scaleAnimation.value, controller.scaleAnimation.value, 1,)
+                            ..rotateY(pi * controller.flipAnimation.value),
+                        );
+                      },
+                      child: IconButton(
+                        icon: const Icon(Icons.ac_unit, size: 50),
+                        onPressed: () => controller.animationStart(),
+                      ),
+                    );
+                  },
                 ),
               ),
             ],
