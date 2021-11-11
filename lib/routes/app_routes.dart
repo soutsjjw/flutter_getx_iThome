@@ -12,4 +12,5 @@ abstract class Routes {
   static const WRAP = "/WrapPage";
   static const BINDING = "/BindingPage";
   static const EXTENSION = "/ExtensionPage";
+  static const NEWS = "/NewsPage";
 }

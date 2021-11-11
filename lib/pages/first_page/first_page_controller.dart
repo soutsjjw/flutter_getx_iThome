@@ -18,6 +18,7 @@ class FirstPageController extends GetxController{
     "WrapPage",
     Routes.BINDING.replaceAll("/", ""),
     "ExtensionPage",
+    Routes.NEWS.replaceAll("/", ""),
   ].obs;
   get dataList => _dataList.toList();
 

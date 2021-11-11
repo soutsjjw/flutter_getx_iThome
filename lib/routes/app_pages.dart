@@ -12,6 +12,8 @@ import 'package:flutter_getx_ithome/pages/image_picker/image_picker_bindings.dar
 import 'package:flutter_getx_ithome/pages/image_picker/image_picker_page.dart';
 import 'package:flutter_getx_ithome/pages/lottie/lottie_bindings.dart';
 import 'package:flutter_getx_ithome/pages/lottie/lottie_page.dart';
+import 'package:flutter_getx_ithome/pages/news/news_bindings.dart';
+import 'package:flutter_getx_ithome/pages/news/news_page.dart';
 import 'package:flutter_getx_ithome/pages/qr_code/qr_code_bindings.dart';
 import 'package:flutter_getx_ithome/pages/qr_code/qr_code_page.dart';
 import 'package:flutter_getx_ithome/pages/qr_code_scan/qr_code_scan_bindings.dart';
@@ -81,6 +83,11 @@ abstract class AppPages {
       name: Routes.EXTENSION,
       page: () => ExtensionPage(),
       binding: ExtensionBinding(),
+    ),
+    GetPage(
+      name: Routes.NEWS,
+      page: () => NewsPage(),
+      binding: NewsBinding(),
     ),
   ];
 }
